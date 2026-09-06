@@ -1,0 +1,134 @@
+# Linux Command Line Fundamentals.
+
+## Resources
+
+## Command Line
+
+**IMPORTANT**: Do not just read or watch the video. Practice everything you are learning as you read/watch. 
+
+### Navigating Command Line
+
+Start with [Effective Shell](https://www.amazon.com/Effective-Shell-David-Kerr/dp/1718504144). Read chapter 1 to get comfortable navigating command line. This will make your life far more comfortable command line.
+
+### Thinking in pipelines
+
+Chapter 2, Thinking in pipelines will be the most important concept. You could learn more about it in Rob Pike's [The Unix Programming Environment](https://www.amazon.com/Unix-Programming-Environment-Prentice-Hall-Software/dp/013937681X). I highly recommend reading at least first two chapters of this book, this is completely optional.
+
+### Filesystem
+
+Next most important concept would be the filesystem. Chapter 3 covers it well. Rob Pike's book should also help immensely. 
+
+These three chapters are the most important building blocks for anyone using the command line in linux/macos. Do not skip anything.
+
+### Text Manipulation
+
+Part II(chapters 4 to 7) deal with text manipulation. You don't need to remember everything but be familiar with grep and sed. 
+
+Chapter 8 is a good way to understand how to think in pipelines. Required reading.
+
+If you don't like reading, especially you are new to command line, you could instead start with [The Missing Semester of Your CS Education](https://missing.csail.mit.edu). First two lessons [Introduction to Shell](https://missing.csail.mit.edu/2026/course-shell/) and [Command Line Environment](https://missing.csail.mit.edu/2026/command-line-environment/) should be good enough. After you are comfortable on the command line, read or skim above mentioned chapters from effective shell.
+
+### Process management
+
+For Process Management, programming books are a more interesting resource. Read something like [Advanced Programming in the UNIX Environment](https://www.amazon.com/Advanced-Programming-UNIX-Environment/dp/9332575908). This is completely optional.
+
+You could read chapters 9(Permissions), 10(Processes) and 11(The Environment) [The Linux Command Line](https://www.amazon.com/Linux-Command-Line-3rd-Introduction/dp/1718504527). DO NOT skip chapter 11, that's the most important one!
+
+For more details read chapter 8 and 13 from [How Linux Works](https://www.amazon.com/How-Linux-Works-Brian-Ward/dp/1718500408)
+
+These are complex topics. Ask your AI agent to teach you or explain anything you don't understand. AI agents are pretty good at this.
+
+### Shell scripting(Optional)
+
+If you do have time skim over Part III, shell scripting. You don't have to be good at it, but you come across shell scripts often, so some familiarity would be useful.
+
+### Practical resource
+
+[Linux Journey](https://labex.io/linuxjourney) is a good resource to practice what you have learnt.
+
+### Nixos
+
+Nixos is a complex piece of software and can be daunting, do not try to learn all of it once. Simple setup script from []() should be a good starting point.
+
+[A short video](https://www.youtube.com/watch?v=CwfKlX3rA6E) explaining the advantages of nixos is a must watch.
+
+[The evolution of Nix](https://www.youtube.com/watch?v=h8hWX_aGGDc) is a must watch for anyone interested in nix/nixos.
+
+In later weeks you could learn more about configuring nixos.
+
+### Git Basics
+
+You will learn git properly in later weeks, but for a start you could read Effective Shell chapters 18 and 19 or [Version Control and Git](https://missing.csail.mit.edu/2026/version-control/) from missing semester video. These cover the essentials of staging, commits, branches, resolving conflicts and merges.
+
+### Editor
+
+Give [Zed Editor](https://zed.dev) a try. It's modern and fast, written in Rust, works fine in Linux. If you prefer `visual studio code` ask your AI agent to comment out zed.nix import and add vscode to system packages.
+
+### Summary
+
+Things you should have learned
+
+- command line keybindings for example ctrl+a, ctrl+e
+- navigating file system using cd, touch, cp, mv, rm, cat, ls, mkdir, find, chmod, ln
+- process management with ps, kill, lsof, strace, pgrep, top, nice, pstree
+- searching/manipulating text with grep, sed, awk(basics only) with regular expressions(basics only)
+- pipelines, redirection operators, job control
+- git sub commands: stage, commit, checkout, merge, push, pull
+
+I would optionally recommend learning tools related networking. These are typically more useful than anything else while troubleshooting difficult issues. Same above resources should be helpful.
+
+## Useful Tips
+
+You must get used to reading man pages. Sometimes that's the only resource. [Explain Shell](https://explainshell.com) should summarize most complex commands well.
+
+Use `tldr` to get a glance at the most common ways a command is used. Most often, you will see what you need and don't need to bother with manpages.
+
+If you are an nvim user, ask your AI agent to setup nvim as the viewer for manpages. You can thank me later!
+
+You can easily create a [distrobox](https://distrobox.it)/[podman](https://podman.io) ubuntu container for learning all of the linux commands without modifying anything on your host operating system.
+
+```bash
+box create ct
+box enter ct # run and enter the container.
+```
+
+If this script is broken, then read the official documentation and ask your AI agent to create a container for learning linux shell.
+
+Learn and use [Github CLI](https://cli.github.com/manual/) for common operations on your github repository from authentication to creating a pr.
+
+For Example
+
+```bash
+gh auth login
+gh ssh-key add ~/.ssh/id_ed25519.pub --title "My laptop"
+```
+
+## Advice
+
+- Once you have completed learning command line, make fish your default shell. Almost all of your commands should work exactly the same. It provides syntax highlighting and autocompletion by default.
+
+- Try nushell, a modern shell written in Rust and data centric. You will better understand pipelines and you get better versions of common commands. DO NOT make it your default shell.
+  ```bash
+  nu
+  ```
+
+- Use modern linux tools
+  - [bat](https://github.com/sharkdp/bat)
+  - [rg](https://github.com/BurntSushi/ripgrep)
+  - [fd](https://github.com/sharkdp/fd)
+  - [sd](https://github.com/chmln/sd)
+  - [eza](https://github.com/eza-community/eza)
+  - [fzf](https://github.com/junegunn/fzf)
+  - [jq](https://github.com/jqlang/jq)
+  - [tldr](https://github.com/tldr-pages/tldr)
+  - [btop](https://github.com/aristocratos/btop)
+  - [xh](https://github.com/ducaale/xh)
+  - [zoxide](https://github.com/ajeetdsouza/zoxide)
+
+## References
+
+- [The Art Of Command Line](https://github.com/jlevy/the-art-of-command-line)
+- [manpages](https://man7.org/linux/man-pages/)
+- [Arch Wiki](https://wiki.archlinux.org/title/Main_page)
+- [NixOS Manual](https://nixos.org/manual/nixos/stable/)
+- [NixOS Wiki](https://wiki.nixos.org/wiki/NixOS_Wiki)
