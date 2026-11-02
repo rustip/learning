@@ -6,3 +6,4 @@
 - [Part IV](resources/p4.md)
 - [Part V](resources/p5.md)
 - [Part VI](resources/p6.md)
+- [Part VII - Distributed Systems](resources/p7.md)
