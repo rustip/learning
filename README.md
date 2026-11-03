@@ -7,4 +7,4 @@
 - [Part V](resources/p5.md)
 - [Part VI](resources/p6.md)
 - [Part VII - Distributed Systems](resources/p7.md)
-- [Part VIII - Distributed Applications](resources/p8.md)
+- [Part VIII - Distributed Applications: Kubernetes, Security, and Observability](resources/p8.md)
