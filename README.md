@@ -8,3 +8,4 @@
 - [Part VI](resources/p6.md)
 - [Part VII - Distributed Systems](resources/p7.md)
 - [Part VIII - Distributed Applications: Kubernetes, Security, and Observability](resources/p8.md)
+- [Part IX - Distributed Services Patterns](resources/p9.md)
